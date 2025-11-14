@@ -7,13 +7,15 @@
       <div class="w100 row justify-center q-pa-lg">
         <header id="top" class="landing-header glass-card row items-center justify-between w90 q-mb-xl" style="position: fixed;">
           <div class="row items-center animate__animated animate__slower animate__delay-1s animate__fadeInLeft">
-            <div class="logo-dot"></div>
+            <div class="logo-dot">
+              <q-img src="/favicon.png" width="40px"></q-img>
+            </div>
             <div class="q-ml-sm">
-              <div class="text-subtitle1 text-white cta-btn revalia q-px-sm">
+              <div class="text-subtitle1 text-white cta-btn-2 revalia q-px-sm">
                 {{ companyName }}
               </div>
-              <div v-if="!isMobile" class="text-caption text-secondary-light">
-                Migração para nuvem • Automação • IA no WhatsApp
+              <div v-if="!isMobile" class="text-caption text-secondary-light text-grey-8">
+                IA no WhatsApp • Migração para nuvem • Automação
               </div>
             </div>
           </div>
@@ -47,16 +49,16 @@
       <section id="inicio" class="section-block hero-block animate__animated animate__slower animate__slideInUp row items-center  q-mb-md">
         <!-- VÍDEO / IMAGEM -->
         <div class="col-12 col-md-6">
-          <div class="text-caption text-secondary-light text-uppercase text-weight-medium q-mb-md q-pl-sm">
+          <!-- <div class="text-caption text-secondary-light text-uppercase text-weight-medium q-mb-md q-pl-sm">
             📍 Distrito Federal e Entorno
-          </div>
+          </div> -->
           <div class="hero-media cursor-pointer q-pa-sm q-mr-md">
             <q-responsive :ratio="16 / 9">
               <!-- troque pelo seu vídeo ou imagem -->
               <div class="video-placeholder flex flex-center column">
                 <q-icon name="play_circle_filled" size="64px" class="accent-text" />
                 <div class="text-caption text-secondary-light q-mt-sm q-px-md">
-                  Espaço para vídeo de apresentação / demo do sistema
+                  VSL
                 </div>
               </div>
             </q-responsive>
@@ -64,8 +66,9 @@
         </div>
         <!-- TEXTO -->
         <div class="col-12 col-md-6">
-          <h1 class="hero-title q-mb-md">
-            <span class="revalia">SOFTWARE HOUSE</span>
+          <h1 class="hero-title animate__animated animate__slower animate__slideInLeft   q-mb-md row items-center no-wrap">
+            <q-img src="/favicon.png" width="85px"></q-img>
+            <span class="revalia ">{{ companyName }}</span>
           </h1>
           <p class="hero-subtitle q-mb-md">
             Migramos seus sistemas para a nuvem com foco em
@@ -201,11 +204,11 @@
         <div class="row q-col-gutter-xl">
           <div class="col-12 col-md-7">
             <div class="section-title q-mb-md">
-              Profissionais em desenvolvimento, marketing, automação e gateways de pagamentos
+              Especialistas em desenvolvimento, marketing, automação e gateways de pagamentos
             </div>
             <p class="text-body2 text-secondary-light q-mb-sm">
-              Somos desenvolvedores fullstack acostumados com
-              <strong>sistemas que não podem parar</strong>. Atuamos na criação de
+              Somos consultores de sistemas e desenvolvedores de alta performance experientes em
+              <strong>sistemas robustos</strong> e <strong>estruturação e otimização de processos focados em redução de custos</strong>. Atuamos na criação de
               produtos digitais, migração e construção de serviços na
               <strong>AWS e outras clouds</strong>, sempre conectando tecnologia com resultado de negócio.
             </p>
@@ -307,7 +310,7 @@
       </section>
 
       <!-- FOOTER -->
-      <footer class="q-mt-xl q-pt-md q-pb-lg footer text-secondary-light">
+      <footer class="q-my-xl q-pt-md q-pb-xl footer text-secondary-light">
         <div class="row items-center justify-between q-col-gutter-md">
           <div class="col-12 col-md-auto">
             <div class="text-caption">
@@ -319,7 +322,7 @@
           </div>
           <div class="col-12 col-md-auto text-right">
             <div class="text-caption">
-              © {{ new Date().getFullYear() }} — Todos os direitos reservados.
+              © {{ new Date().getFullYear() }} — Todos os direitos reservados. <br> <a href="https://samuelvictorol.github.io/portfolio/" class="revalia" target="_blank" style="color: teal;">59.905.708/0001-34</a>
             </div>
           </div>
         </div>
@@ -338,7 +341,7 @@ import { ref, computed } from 'vue'
 import { useMeta } from 'quasar'
 
 const isMobile = window.innerWidth < 768
-const companyName = 'Software House' // ajuste o nome da empresa
+const companyName = 'AITO SOFTWARES' // ajuste o nome da empresa
 const drawerOpen = ref(false)
 
 const phone = ref('')
@@ -538,7 +541,7 @@ function sendLead() {
 
 useMeta(() => ({
   title:
-    'Migração para Nuvem, Automação e IA no WhatsApp — Valparaíso de Goiás, DF e Goiânia',
+    'AITO SOFTWARES',
   meta: [
     {
       name: 'description',
@@ -602,8 +605,8 @@ useMeta(() => ({
 }
 
 .logo-dot {
-  width: 26px;
-  height: 26px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: radial-gradient(circle at 30% 30%, #14b8a6, #14b8a6);
   box-shadow: 0 0 18px rgba(56, 189, 248, 0.5);
@@ -792,8 +795,20 @@ useMeta(() => ({
   transition: all 0.3s ease;
 }
 
+.cta-btn-2 {
+  background: linear-gradient(135deg, #20b4be, #0bdf75);
+  color: #f9fafb;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
 .cta-btn:hover {
   filter: drop-shadow(0 8px 24px rgba(34, 197, 94, 0.5));
+  transform: translateY(-2px);
+}
+.cta-btn-2:hover {
+  filter: drop-shadow(0 8px 24px rgba(34, 145, 197, 0.5));
   transform: translateY(-2px);
 }
 
