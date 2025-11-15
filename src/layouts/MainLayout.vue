@@ -57,16 +57,18 @@
               <!-- <div class="text-caption text-secondary-light text-uppercase text-weight-medium q-mb-md q-pl-sm">
             📍 Distrito Federal e Entorno
           </div> -->
-              <div class="hero-media cursor-pointer q-pa-sm q-mr-md">
-                <q-responsive :ratio="16 / 9">
-                  <!-- troque pelo seu vídeo ou imagem -->
+              <div class="hero-media cursor-pointer q-pa-sm q-mr-md row justify-center">
+                <!-- <q-responsive :ratio="16 / 9">
+                  troque pelo seu vídeo ou imagem
                   <div class="video-placeholder flex flex-center column">
                     <q-icon name="play_circle_filled" size="64px" class="accent-text" />
                     <div class="text-caption text-secondary-light q-mt-sm q-px-md">
                       VSL
                     </div>
                   </div>
-                </q-responsive>
+                </q-responsive> -->
+                <q-img src="/chat.png" width="75%" alt="Imagem ilustrativa de tecnologia em nuvem e IA no WhatsApp"
+                  class="hero-media" />
               </div>
             </div>
             <!-- TEXTO -->
@@ -141,7 +143,6 @@
               </div>
             </div>
           </section>
-
           <!-- COMO FUNCIONA -->
           <section id="como-funciona"
             class="section-block q-mb-xl animate__animated animate__slower animate__delay-1s animate__fadeInRight">
@@ -323,16 +324,16 @@
             <div class="row items-center justify-between q-col-gutter-md">
               <div class="col-12 col-md-auto">
                 <div class="text-caption">
-                  <q-img src="/favicon.png" width="60px"></q-img><strong>{{ companyName }}</strong> — Consultoria em Nuvem, Automação e
+                  <q-img src="/favicon.png" width="60px"></q-img><strong class="revalia">{{ companyName }}</strong> — Consultoria em Nuvem, Automação e
                   IA no WhatsApp.
                 </div>
                 <div class="text-caption">
-                  <q-icon name="mdi-instagram" color="teal" size="md"></q-icon> Acompanhe as novidades em nosso Instagram:
+                  <q-icon name="mdi-instagram" color="teal" size="sm"></q-icon> Acompanhe as novidades em nosso Instagram:
                   <a href="https://www.instagram.com/aitosoftwares/" style="text-decoration: none;" class="text-bold text-teal"
                   target="_blank">@aitosoftwares</a>
                 </div>
                 <div class="text-caption q-pt-md">
-                  <q-icon name="pin_drop" color="teal" size="md"></q-icon> Atendemos Valparaíso de Goiás, região do DF, Goiânia e projetos remotos em todo o Brasil.
+                  <q-icon name="pin_drop" color="teal" size="sm"></q-icon> Atendemos Valparaíso de Goiás, região do DF, Goiânia e projetos remotos em todo o Brasil.
                 </div>
               </div>
               <div class="col-12 col-md-auto text-right">
